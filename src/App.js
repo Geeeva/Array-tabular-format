@@ -54,12 +54,14 @@ const solution = (a, k) => {
     const rowSegmentBottomBorder = `+${repeatingCharactersBottomBorder}`;
     const wholeRowBottomBorder = rowSegmentBottomBorder.repeat(subsetArray[subsetArray.length - 1].length);
     
-     //Defining the content of the table and putting it into temporaryContent
-     for(let i = 0; i < subsetArray.length; i++)
+    //Defining the content of the table and putting it into temporaryContent
+    for(let i = 0; i < subsetArray.length; i++)
         temporaryContent[i] = "";
         for(let j = 0; j < subsetArray[i].length; j++){ 
             temporaryContent[i] += "|" + "\u00A0".repeat(largestNumberOfDigits - subsetArray[i][j].toString().length) + subsetArray[i][j];
         }
+        outputString += `${wholeRowUpperBorder}+\n`;
+        outputString += `${temporaryContent[i]}|\n`;
     } 
 }
 
