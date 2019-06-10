@@ -34,11 +34,12 @@ const arrayPrinting = (a, k) => {
         temparray = a.slice(i, i + chunk);
         subsetArray.push(temparray);
     }
+    console.log(subsetArray);
 }
 const App = () => {
     return (
         <div>
-            
+            {arrayPrinting(a, k)}
         </div>
     );
 }
