@@ -41,8 +41,13 @@ const solution = (a, k) => {
 
             
     //Checking the number with greatest number of digits within array
-    const largestNumber = Math.max.apply(a);
+    const largestNumber = Math.max.apply(null, a);
     const largestNumberOfDigits = largestNumber.toString().length;
+
+    //Defining upper border of the table preview
+    const repeatingCharactersUpperBorder = "-".repeat(largestNumberOfDigits);
+    const rowSegmentUpperBorder = `+${repeatingCharactersUpperBorder}+`;
+    const wholeRowUpperBorder = rowSegmentUpperBorder.repeat(k);
 }
 
 const App = () => {
