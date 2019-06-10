@@ -46,7 +46,7 @@ const solution = (a, k) => {
 
     //Defining upper border of the table preview
     const repeatingCharactersUpperBorder = "-".repeat(largestNumberOfDigits);
-    const rowSegmentUpperBorder = `+${repeatingCharactersUpperBorder}+`;
+    const rowSegmentUpperBorder = `+${repeatingCharactersUpperBorder}`;
     const wholeRowUpperBorder = rowSegmentUpperBorder.repeat(k);
 }
 
