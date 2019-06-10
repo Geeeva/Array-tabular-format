@@ -48,6 +48,12 @@ const solution = (a, k) => {
     const repeatingCharactersUpperBorder = "-".repeat(largestNumberOfDigits);
     const rowSegmentUpperBorder = `+${repeatingCharactersUpperBorder}`;
     const wholeRowUpperBorder = rowSegmentUpperBorder.repeat(k);
+    console.log(wholeRowUpperBorder);
+    //Defining bottom border of the table preview
+    const repeatingCharactersBottomBorder = "-".repeat(largestNumberOfDigits);
+    const rowSegmentBottomBorder = `+${repeatingCharactersBottomBorder}`;
+    const wholeRowBottomBorder = rowSegmentBottomBorder.repeat(subsetArray[subsetArray.length - 1].length);
+    console.log(wholeRowBottomBorder);
 }
 
 const App = () => {
