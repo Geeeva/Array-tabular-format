@@ -62,7 +62,13 @@ const solution = (a, k) => {
         }
         outputString += `${wholeRowUpperBorder}+\n`;
         outputString += `${temporaryContent[i]}|\n`;
-    } 
+    }
+    
+    outputString += `${wholeRowBottomBorder}+`;
+    //Outputing the content of the string with process.stdout.write() or console.log()
+    
+    //process.stdout.write(outputString);
+    console.log(outputString);
 }
 
 const App = () => {
