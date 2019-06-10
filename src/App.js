@@ -23,6 +23,17 @@ const arrayPrinting = (a, k) => {
             return;
         }
     }
+
+    //Creating subsetArray
+    let subsetArray = [];
+    let temparray;
+
+    const chunk = k;
+    //Looping through a array and injecting chunks-temparray into subsetArray
+    for (let i = 0;  i < a.length; i += chunk) {
+        temparray = a.slice(i, i + chunk);
+        subsetArray.push(temparray);
+    }
 }
 const App = () => {
     return (
