@@ -55,7 +55,7 @@ const solution = (a, k) => {
     const wholeRowBottomBorder = rowSegmentBottomBorder.repeat(subsetArray[subsetArray.length - 1].length);
     
     //Defining the content of the table and putting it into temporaryContent
-    for(let i = 0; i < subsetArray.length; i++)
+    for(let i = 0; i < subsetArray.length; i++){
         temporaryContent[i] = "";
         for(let j = 0; j < subsetArray[i].length; j++){ 
             temporaryContent[i] += "|" + "\u00A0".repeat(largestNumberOfDigits - subsetArray[i][j].toString().length) + subsetArray[i][j];
@@ -67,8 +67,8 @@ const solution = (a, k) => {
     outputString += `${wholeRowBottomBorder}+`;
     //Outputing the content of the string with process.stdout.write() or console.log()
     
-    //process.stdout.write(outputString);
-    console.log(outputString);
+    process.stdout.write(outputString);
+    //console.log(outputString);
 }
 
 const App = () => {
