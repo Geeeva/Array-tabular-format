@@ -1,6 +1,6 @@
 import React from 'react';
 
-const a = [], k = 4;
+const a = [4, 35, 80, 123, 12345, 44, 8, 5, 24, 3], k = 4;
 
 const arrayPrinting = (a, k) => {
     //Setting bounderies
@@ -11,7 +11,7 @@ const arrayPrinting = (a, k) => {
     }
 
     //k is not an integer within the range [1..1,000,000,000] - break, or k is not an integer, or k is greater than the length of array exiting the function
-    if( k < 1 || k > 1000000 || !Number.isInteger(k) || k > a.length) {
+    if( k < 1 || k > 10000000 || !Number.isInteger(k) || k > a.length) {
         console.log("Break - k is smaller than 1 or has value greater than 1000000, or k is not an integer, or k is greater than the length of array, therefore array cannot be divided into rows");
         return;
     } 
