@@ -2,7 +2,7 @@ import React from 'react';
 
 const a = [4, 35, 80, 123, 12345, 44, 8, 5, 24, 3], k = 4;
 
-const arrayPrinting = (a, k) => {
+const solution = (a, k) => {
     //Setting bounderies
     //N is an integer within the range [1..200] - length of array and if no exiting the function
     if(a.length === 0 || a.length > 200) {
@@ -34,13 +34,21 @@ const arrayPrinting = (a, k) => {
         temparray = a.slice(i, i + chunk);
         subsetArray.push(temparray);
     }
-    console.log(subsetArray);
+    
+    //Initializing outputString for the final output and temporaryContent
+    let outputString = "";
+    let temporaryContent = [];
+
+            
+    //Checking the number with greatest number of digits within array
+    const largestNumber = Math.max.apply(a);
+    const largestNumberOfDigits = largestNumber.toString().length;
 }
 
 const App = () => {
     return (
         <div>
-            {arrayPrinting(a, k)}
+            {solution(a, k)}
         </div>
     );
 }
